@@ -21,12 +21,17 @@ public class ItemHandler {
 
         try {
             items = Item.searchItemsAfterGroup(searchByGroup);
+            for(int i=0;i<items.size();i++)
+            {
+                itemsReturn.add(new Item(items.get(i).getArtNr(),items.get(i).getname(), items.get(i).getdescription(),items.get(i).getCategory()
+                ,items.get(i).getprice(),items.get(i).getQuantity()));
+            }
         } catch (IOException ex) {
             Logger.getLogger(ItemHandler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(ItemHandler.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            itemsReturn = items;
+            
             return itemsReturn;
 
         }
@@ -37,10 +42,14 @@ public class ItemHandler {
         List<Item> itemsReturn = new ArrayList<Item>();
         try {
             items = Item.getItems();
+            for(int i=0;i<items.size();i++)
+            {
+                itemsReturn.add(new Item(items.get(i).getArtNr(),items.get(i).getname(), items.get(i).getdescription(),items.get(i).getCategory()
+                ,items.get(i).getprice(),items.get(i).getQuantity()));
+            }
         } catch (Exception ex) {
             Logger.getLogger(ItemHandler.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            itemsReturn = items;
             return itemsReturn;
 
         }

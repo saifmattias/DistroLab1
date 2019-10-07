@@ -10,11 +10,10 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 public class CustomerHandler {
     public Customer searchCustomer(String UID) {
          Customer searched = Customer.searchCustomer(Integer.parseInt(UID));
-         Customer searchedCopy = searched;
+         Customer searchedCopy = new Customer(searched.getCID(),searched.getName(),searched.getLastname(),searched.getAddress(),searched.getCity(),searched.getZip());
          return searchedCopy;
     }
 }

@@ -20,12 +20,12 @@ public class LoginHandler {
          Login userValidateCopy = null;
         try {
             userValidate = Login.selectLogin(new Login(user,pwd));
+            userValidateCopy = new Login(userValidate.getUID(),userValidate.getUsertype());
         } catch (IOException ex) {
             Logger.getLogger(ItemHandler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(ItemHandler.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
-            userValidateCopy = userValidate;
             return userValidateCopy;
         }
     }

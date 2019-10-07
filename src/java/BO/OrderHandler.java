@@ -16,7 +16,11 @@ public class OrderHandler {
 
     public List<Order> getAllOrder() {
         List<Order> orders = Order.getOrders();
-        List<Order> ordersCopy = orders;
+        List<Order> ordersCopy = null ;
+        for (int i = 0; i < orders.size(); i++) {
+            ordersCopy.add(new Order(orders.get(i).getOID(),orders.get(i).getFirstname(),orders.get(i).getLastname(),orders.get(i).getShippingAddress()
+            ,orders.get(i).getCity(),orders.get(i).getZip(),orders.get(i).getOrderDate(),orders.get(i).getTotalPrice(),orders.get(i).getStatus(),orders.get(i).getUID()));
+        }
         return ordersCopy;
     }
 
@@ -30,7 +34,12 @@ public class OrderHandler {
 
     public List<Order> getAllOrderByID(int UID) {
         List<Order> orders = Order.getOrdersByID(UID);
-        List<Order> ordersCopy = orders;
+        List<Order> ordersCopy = null;
+        System.out.println("hejsan " + orders.toString());
+        for (int i = 0; i < orders.size(); i++) {
+            ordersCopy.add(new Order(orders.get(i).getOID(),orders.get(i).getFirstname(),orders.get(i).getLastname(),orders.get(i).getShippingAddress()
+            ,orders.get(i).getCity(),orders.get(i).getZip(),orders.get(i).getOrderDate(),orders.get(i).getTotalPrice(),orders.get(i).getStatus(),orders.get(i).getUID()));
+        }
         return ordersCopy;
     }
 

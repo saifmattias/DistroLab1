@@ -32,13 +32,14 @@
                     } else if (session.getAttribute("userType").equals("Personal")) {
                         response.sendRedirect("http://localhost:8080/Lab1Distro/UI/personalPanel.jsp");
                     }
-
+                    
                 } else {
                     Login loginID = login.validate(request.getParameter("username"), request.getParameter("password"));
+                    
                     if (loginID != null) {
                         session.setAttribute("userid", loginID.getUID());
                         session.setAttribute("userType", loginID.getUsertype());
-                        if (session.getAttribute("userid") != null && action.equals("order")) {
+                        if (session.getAttribute("userid") != null && action.equals("order")) {                            
                             response.sendRedirect("http://localhost:8080/Lab1Distro/UI/order.jsp");
                         } else if (session.getAttribute("userid") != null && action.equals("menu")) {
                             if (session.getAttribute("userType").equals("Customer")) {
@@ -48,7 +49,7 @@
                             } else if (session.getAttribute("userType").equals("Personal")) {
                                 response.sendRedirect("http://localhost:8080/Lab1Distro/UI/personalPanel.jsp");
                             }
-
+                            
                         }
                     }
         %>

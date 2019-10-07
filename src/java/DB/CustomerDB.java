@@ -12,9 +12,10 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class CustomerDB extends Customer {
+
     static Connection con = null;
+
     public static Customer searchCustomer(int customerUID) {
         Customer v = null;
         try {
@@ -23,7 +24,9 @@ public class CustomerDB extends Customer {
             String test = "SELECT * from customer WHERE UID = " + customerUID + "";
             ps = con.prepareStatement(test);
             ResultSet rs = ps.executeQuery(test);
+            System.out.println("Hejsan salala " + customerUID);
             while (rs.next()) {
+                System.out.println("Hejsan salala 4 " + customerUID);
                 int i = rs.getInt("CID");
                 String name = rs.getString("Name");
                 String lName = rs.getString("Lastname");
