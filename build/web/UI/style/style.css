@@ -1,0 +1,123 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+
+body {background:#7cbac1; margin: 0;}
+/* Vertical Tabs */
+.navbar-right
+{
+    float: right;
+}
+.vertical-tabs{
+    font-size:15px;
+    padding:10px;
+    color:#000;
+    margin: 50px 0 0 0;
+}
+.vertical-tabs .nav-tabs .nav-link{
+    border-radius: 0;
+    background:#9DE093;
+    text-align:center;
+    font-size: 16px;
+    border:0px solid #424242;
+    color:#fff;
+    height:40px;
+    width: 120px;
+}
+.vertical-tabs .nav-tabs .nav-link.active{
+    background-color:#700000!important;
+    color:#fff;
+}
+.vertical-tabs .tab-content>.active{
+    background:#fff;
+    display:block;
+}
+.vertical-tabs .nav.nav-tabs{
+    border:3px solid #000;
+    display:block;
+    float:left;
+    margin-right:20px;
+    padding:15px;
+}
+.vertical-tabs .sv-tab-panel{
+    background:#fff;
+    height:auto;
+    padding-top:0px;
+}
+@media only screen and (max-width: 420px){
+    .titulo{font-size: 22px}
+}
+@media only screen and (max-width: 325px){
+    .vertical-tabs{ padding:8px;}
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    font-size: 9px;
+}
+#dropdownMenu1
+{
+    font-size: 12px;
+    color:black;
+    position: fixed;
+}
+.hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+.ps4Iframe
+{
+    width: 1000px;
+    height: 1000px;
+}
+#col1 {
+    position: absolute;
+    padding: 0px;  
+    margin-bottom: 10px;
+
+}
+
+#col2 {
+    position: absolute;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+#col3 {
+    margin-left: 600px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+
+
+
+.quantity .minus, .quantity .plus {
+    line-height: 0;
+    background-clip: padding-box;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-size: 6px 30px;
+    -moz-background-size: 6px 30px;
+    color: #bbb;
+    font-size: 20px;
+    position: absolute;
+    height: 50%;
+    border: 0;
+    right: 0;
+    padding: 0;
+    width: 25px;
+    z-index: 3
+}
+
+.quantity .minus:hover, .quantity .plus:hover {
+    background-color: #dad8da
+}
+
+.quantity .minus {
+    bottom: 0
+}
+.shopping-cart {
+    margin-top: 20px;
+}
